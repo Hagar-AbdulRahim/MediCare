@@ -1,0 +1,697 @@
+/* Modern Patient Profile Styles - Calm & Consistent Colors */
+:root {
+  --primary-color: #8b7fa0;
+  --secondary-color: #a89bb8;
+  --light-bg: #f5f3f8;
+  --border-radius: 12px;
+  --success-color: #9db5a3;
+  --warning-color: #c9a986;
+  --text-dark: #4a4a5a;
+  --text-light: #7a7a8a;
+}
+
+.patient-profile-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0ede8 0%, #e8e4f0 100%);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  direction: ltr;
+}
+
+.back-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.back-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateX(-5px);
+}
+
+.success-alert {
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, var(--success-color), #8aa586);
+  color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(157, 181, 163, 0.3);
+  font-weight: 600;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Compact Profile Card */
+.profile-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 900px;
+  /* Reduced for comfort */
+  margin: 0 auto 30px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.profile-image {
+  width: 200px;
+  height: 220px;
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 8px 20px rgba(100, 100, 100, 0.15);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-image:hover img {
+  transform: scale(1.08);
+}
+
+.profile-icon {
+  font-size: 80px;
+}
+
+.profile-info h1 {
+  margin: 0 0 25px;
+  color: var(--text-dark);
+  font-size: 32px;
+  /* Slightly smaller heading */
+  font-weight: 700;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--light-bg);
+  border-radius: 12px;
+  /* Rounded corners */
+}
+
+.info-icon {
+  font-size: 20px;
+}
+
+.info-item span:last-child {
+  color: var(--text-dark);
+  font-weight: 600;
+  /* Bolder text */
+  font-size: 14px;
+}
+
+/* Appointments Container */
+.appointments-container {
+  max-width: 900px;
+  /* Match profile card */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /* Reduced gap */
+}
+
+/* Booking Section */
+.booking-section {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 20px;
+  /* Slightly smaller */
+  font-weight: 700;
+}
+
+.badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.confirmed-badge {
+  background: var(--success-color);
+}
+
+.book-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg,
+      var(--primary-color),
+      var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(139, 127, 160, 0.4);
+  /* Nice shadow */
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 127, 160, 0.5);
+}
+
+/* Booking Form */
+.booking-form {
+  background-color: var(--light-bg);
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0dce6;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: border-color 0.3s ease;
+  background-color: white;
+  color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(139, 127, 160, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.submit-btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--success-color), #8aa586);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(157, 181, 163, 0.3);
+}
+
+.form-actions .cancel-btn {
+  flex: 1;
+  padding: 12px 20px;
+  background: #e0dce6;
+  color: var(--text-dark);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-actions .cancel-btn:hover {
+  background: #d0ccd6;
+  transform: translateY(-2px);
+}
+
+/* Appointments Sections */
+.appointments-list-section {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.no-appointments {
+  text-align: center;
+  color: var(--text-light);
+  padding: 40px 20px;
+  font-size: 15px;
+}
+
+.appointments-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.appointment-card {
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color);
+  background: var(--light-bg);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pending-card {
+  border-left-color: var(--warning-color);
+}
+
+.confirmed-card {
+  border-left-color: var(--success-color);
+}
+
+.appointment-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.apt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.apt-header h3 {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+  background-color: #f5e6d3;
+  color: #8b6f47;
+}
+
+.status-badge.confirmed {
+  background-color: #e0eddd;
+  color: #556b54;
+}
+
+.apt-body {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.apt-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.cancel-apt-btn {
+  width: 100%;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #c9a986, #b89a78);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cancel-apt-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(201, 169, 134, 0.3);
+}
+
+.cancel-apt-btn:active {
+  transform: translateY(0);
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--text-dark);
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .profile-header {
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 240px;
+  }
+
+  .appointments-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-profile-container {
+    padding: 15px;
+  }
+
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .profile-info h1 {
+    font-size: 28px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 18px;
+  }
+
+  .apt-body {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(139, 127, 160, 0.1);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 127, 160, 0.4);
+}
+
+/* Appointments Section */
+.appointments-section {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.appointments-section h2 {
+  color: #333;
+  margin: 0 0 30px;
+  font-size: 24px;
+}
+
+.no-appointments {
+  text-align: center;
+  color: #999;
+  padding: 30px;
+  font-size: 16px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.appointment-item:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(139, 127, 160, 0.15);
+}
+
+.apt-info {
+  flex: 1;
+  text-align: right;
+}
+
+.apt-info p {
+  margin: 8px 0;
+  color: #333;
+}
+
+.apt-info strong {
+  color: var(--primary-color);
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.confirmed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  font-size: 18px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+  .profile-card,
+  .appointments-section {
+    padding: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .profile-icon {
+    font-size: 75px;
+  }
+
+  .profile-info h1 {
+    font-size: 24px;
+  }
+
+  .appointment-item {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .apt-info {
+    width: 100%;
+  }
+
+  .cancel-btn {
+    width: 100%;
+  }
+}

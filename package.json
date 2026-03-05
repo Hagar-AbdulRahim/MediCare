@@ -1,0 +1,10 @@
+{
+    "name": "hospital-project",
+    "version": "1.0.0",
+    "description": "Root script runner",
+    "scripts": {
+        "server": "cd Backend && npm run server",
+        "frontend": "cd frontend && npm run dev",
+        "dev": "cd frontend && npm run dev"
+    }
+}

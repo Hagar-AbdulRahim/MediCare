@@ -1,0 +1,123 @@
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    padding: 0 24px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.fixed-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-card);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.app-logo {
+    font-family: var(--font-headings);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 12px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-back-btn,
+.header-logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.header-back-btn {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--text-body);
+    border: 1px solid #e2e8f0;
+}
+
+.header-back-btn:hover {
+    background: white;
+    color: var(--accent-color);
+    transform: translateX(-4px);
+    box-shadow: var(--shadow-sm);
+}
+
+.header-logout-btn {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.header-logout-btn:hover {
+    background: #fecaca;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.nav-link-item {
+    color: var(--text-body);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    transition: all 0.2s;
+}
+
+.nav-link-item:hover {
+    color: var(--accent-color);
+    background: var(--accent-light);
+}
+
+.nav-link-item.active {
+    color: var(--accent-color);
+    background: var(--accent-light);
+}
+
+@media (max-width: 768px) {
+    .fixed-header {
+        padding: 0 20px;
+    }
+
+    .app-logo span {
+        display: none;
+    }
+
+    .header-actions span {
+        display: none;
+    }
+
+    .header-back-btn,
+    .header-logout-btn {
+        padding: 10px;
+    }
+}
